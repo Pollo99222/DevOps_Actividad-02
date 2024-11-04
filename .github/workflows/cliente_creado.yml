@@ -1,0 +1,13 @@
+name: Cliente Creado
+
+on:
+  workflow_dispatch: # Permite ejecutar manualmente este flujo de trabajo
+  issues:
+    types: [opened] # Se activará cuando se abra un nuevo issue
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar mensaje de creación de cliente
+        run: echo "¡Un nuevo cliente ha sido creado! Notificar a todos los miembros del equipo."

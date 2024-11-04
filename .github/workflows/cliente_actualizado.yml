@@ -1,0 +1,13 @@
+name: Cliente Actualizado
+
+on:
+  workflow_dispatch: # Permite ejecutar manualmente este flujo de trabajo
+  issues:
+    types: [edited] # Se activará cuando se edite un issue
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar mensaje de actualización de cliente
+        run: echo "¡Un cliente recurrente ha sido actualizado! Notificar a todos los miembros del equipo."

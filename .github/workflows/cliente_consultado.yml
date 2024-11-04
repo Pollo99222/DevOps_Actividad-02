@@ -1,0 +1,13 @@
+name: Cliente Consultado
+
+on:
+  workflow_dispatch: # Permite ejecutar manualmente este flujo de trabajo
+  issues:
+    types: [commented] # Se activará cuando se comente en un issue
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar mensaje de consulta de cliente
+        run: echo "¡Se ha consultado un cliente! Notificar a todos los miembros del equipo."
