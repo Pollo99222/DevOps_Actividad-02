@@ -1,6 +1,6 @@
 # gestion_clientes.py
 class GestionClientes:
-    clientes = {} # Tabla hash para almacenar la información de los clientes
+    clientes = {}  # Tabla hash para almacenar la información de los clientes
 
     @staticmethod
     def verificarCliente(nombre):

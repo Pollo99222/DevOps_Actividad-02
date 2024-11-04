@@ -2,7 +2,7 @@
 from datetime import datetime
 
 class GestionServicios:
-    historial_servicios = {} # Tabla hash para el historial de servicios
+    historial_servicios = {}  # Tabla hash para el historial de servicios
 
     @staticmethod
     def agregarServicio(nombreCliente, detallesServicio, descripcion):
@@ -24,4 +24,8 @@ class GestionServicios:
     @staticmethod
     def consultarServicios(nombreCliente):
         """Obtiene el historial de servicios solicitados para el cliente."""
-        return GestionServicios.historial_servicios.get(nombreCliente, None)
+        servicios = GestionServicios.historial_servicios.get(nombreCliente, None)
+        if servicios:
+            return servicios
+        else:
+            return []  # Retornar una lista vacía si no hay servicios
