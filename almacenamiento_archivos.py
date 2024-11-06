@@ -2,7 +2,7 @@
 import os
 
 DIRECTORIO_CLIENTES = "clientes"
-
+"""
 class AlmacenamientoArchivos:
     
     @staticmethod
@@ -34,3 +34,4 @@ class AlmacenamientoArchivos:
         else:
             print(f"No se encontró el archivo para '{nombreCliente}'.")
             return None
+"""
